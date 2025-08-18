@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5" *ngIf="flightData">
+  <h2 class="text-center mb-4">Enter Passenger Details</h2>
+
+  <div class="mb-3">
+    <p><strong>Flight:</strong> {{ flightData.flight.flightNumber }} ({{ flightData.flight.airline }})</p>
+    <p><strong>Class:</strong> {{ flightData.classType }}</p>
+    <p><strong>Total Passengers:</strong> {{ passengers.length }}</p>
+  </div>
+
+  <form [formGroup]="passengerForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="passengers">
+      <div *ngFor="let passenger of passengers; let i = index" [formGroupName]="i" class="card mb-3 p-3">
+        <h5>Passenger {{ i + 1 }}</h5>
+        <div class="row mb-2">
+          <div class="col">
+            <label>Full Name</label>
+            <input type="text" class="form-control" formControlName="fullName">
+          </div>
+          <div class="col">
+            <label>Age</label>
+            <input type="number" class="form-control" formControlName="age">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success me-3">Continue to Payment</button>
+      <button type="reset" class="btn btn-secondary" (click)="passengerForm.reset()">Reset</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<div class="form-wrapper">
+  <div class="registration-card animate-fade-in">
+    <h2 class="form-title">User Registration</h2>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">Title</label>
+          <select class="form-select" formControlName="title">
+            <option value="">Select Title</option>
+            <option>Mr</option>
+            <option>Ms</option>
+            <option>Mrs</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" formControlName="firstName">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" formControlName="confirmPassword">
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" formControlName="dob">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone Number</label>
+          <input type="text" class="form-control" formControlName="phone">
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button type="submit" class="btn-modern btn-primary me-3">Sign Up</button>
+        <button type="reset" class="btn-modern btn-secondary" (click)="registrationForm.reset()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

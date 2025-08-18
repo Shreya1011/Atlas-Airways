@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5 text-center">
+  <h2>Admin Dashboard</h2>
+
+  <div class="d-flex justify-content-center mt-4 gap-3">
+    <button class="btn btn-primary" (click)="navigateTo('add-flight')">Add Flight</button>
+    <button class="btn btn-danger" (click)="navigateTo('delete-flight')">Delete Flight</button>
+    <button class="btn btn-info" (click)="navigateTo('view-flights')">View Flights</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

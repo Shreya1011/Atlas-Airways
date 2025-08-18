@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">All Flights</h2>
+
+  <div *ngIf="flights.length === 0" class="text-center">
+    <p>No flights available.</p>
+  </div>
+
+  <div *ngFor="let flight of flights; let i = index" class="card mb-3 p-3">
+    <h5>{{ flight.airline }} - {{ flight.flightNumber }}</h5>
+    <p>From: {{ flight.departure }} → To: {{ flight.arrival }}</p>
+    <p>Departure: {{ flight.departureTime }} | Arrival: {{ flight.arrivalTime }}</p>
+    <p>Economy: ₹{{ flight.fareEconomy }} | Seats: {{ flight.availableSeatsEconomy }}</p>
+    <p>Business: ₹{{ flight.fareBusiness }} | Seats: {{ flight.availableSeatsBusiness }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>

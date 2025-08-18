@@ -1,0 +1,12 @@
+/* Global background color */
+:host {
+  display: block;
+  min-height: 100vh; /* full viewport height */
+  background-color: #c2e2fc;
+  font-family: Arial, sans-serif;
+}
+
+/* Optional: make sure the container takes full width */
+.app-container {
+  min-height: 100vh;
+}

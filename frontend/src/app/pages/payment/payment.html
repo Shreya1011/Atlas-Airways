@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5" *ngIf="flightData">
+  <h2 class="text-center mb-4">Payment</h2>
+
+  <div class="card mb-4 p-3">
+    <h5>Flight Details</h5>
+    <p><strong>Flight:</strong> {{ flightData.flight.flightNumber }} ({{ flightData.flight.airline }})</p>
+    <p><strong>Class:</strong> {{ flightData.classType }}</p>
+    <p><strong>Passengers:</strong> {{ passengers.length }}</p>
+    <p><strong>Total Fare:</strong> ₹{{ totalFare }}</p>
+  </div>
+
+  <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="mx-auto" style="max-width: 400px;">
+    <div class="mb-3">
+      <label>Card Number</label>
+      <input type="text" class="form-control" formControlName="cardNumber" placeholder="16-digit card number">
+    </div>
+
+    <div class="mb-3">
+      <label>Card Holder Name</label>
+      <input type="text" class="form-control" formControlName="cardHolder" placeholder="Name on card">
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label>Expiry Date</label>
+        <input type="month" class="form-control" formControlName="expiryDate">
+      </div>
+      <div class="col">
+        <label>CVV</label>
+        <input type="text" class="form-control" formControlName="cvv" placeholder="3-digit CVV">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Pay ₹{{ totalFare }}</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
