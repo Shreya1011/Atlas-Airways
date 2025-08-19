@@ -1,0 +1,4 @@
+com/atlasairways/apigateway/filter/JwtAuthenticationFilter.class
+com/atlasairways/apigateway/config/GatewaySecurityConfig.class
+com/atlasairways/apigateway/ApiGatewayApplication.class
+com/atlasairways/apigateway/util/JwtUtil.class

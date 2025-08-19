@@ -1,0 +1,4 @@
+/workspaces/Atlas-Airways/backend/api-gateway/src/main/java/com/atlasairways/apigateway/ApiGatewayApplication.java
+/workspaces/Atlas-Airways/backend/api-gateway/src/main/java/com/atlasairways/apigateway/config/GatewaySecurityConfig.java
+/workspaces/Atlas-Airways/backend/api-gateway/src/main/java/com/atlasairways/apigateway/filter/JwtAuthenticationFilter.java
+/workspaces/Atlas-Airways/backend/api-gateway/src/main/java/com/atlasairways/apigateway/util/JwtUtil.java
