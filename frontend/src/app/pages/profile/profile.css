@@ -1,0 +1,63 @@
+/* No Bookings */
+.no-bookings {
+  font-size: 1rem;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+}
+
+/* Booking Card */
+.booking-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.airline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.booking-header .badge {
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* Body */
+.booking-body p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* Cancel Button */
+.booking-actions .btn {
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.booking-actions .btn:hover {
+  transform: scale(1.03);
+  background: #dc2626;
+  color: #fff;
+  border: none;
+}

@@ -1,0 +1,86 @@
+/* Flight Card Styling */
+.flight-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.airline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.flight-number {
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* Route Info */
+.flight-route {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.flight-route .arrow {
+  margin: 0 6px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Pricing */
+.flight-pricing p {
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.seats {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Buttons */
+.flight-actions .btn {
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.flight-actions .btn:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* No Flights */
+.no-flights {
+  font-size: 1rem;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+}

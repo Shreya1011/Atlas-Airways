@@ -1,0 +1,68 @@
+/* Flight Summary */
+.flight-summary {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  font-size: 0.95rem;
+}
+
+.flight-summary h5 {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.flight-summary p {
+  margin: 6px 0;
+  color: #334155;
+}
+
+.total-fare {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* Payment Form */
+.payment-form {
+  max-width: 450px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.payment-form label {
+  font-weight: 500;
+  color: #334155;
+}
+
+/* Inputs */
+.modern-input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  transition: all 0.25s ease;
+}
+
+.modern-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Pay Button */
+button.btn {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.25s ease, background 0.3s;
+}
+
+button.btn-primary {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border: none;
+}
+
+button.btn-primary:hover {
+  transform: scale(1.04);
+  background: linear-gradient(90deg, #1d4ed8, #2563eb);
+}

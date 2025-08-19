@@ -1,19 +1,36 @@
 <app-navbar></app-navbar>
 
 <div class="container mt-5">
-  <h2 class="text-center mb-4">My Bookings</h2>
+  <h2 class="text-center mb-4 fw-bold">📑 My Bookings</h2>
 
-  <div *ngIf="bookings.length === 0" class="text-center">
+  <!-- No Bookings -->
+  <div *ngIf="bookings.length === 0" class="text-center text-muted no-bookings">
     <p>No bookings found.</p>
   </div>
 
-  <div *ngFor="let booking of bookings; let i = index" class="card mb-3 p-3">
-    <h5>Flight: {{ booking.flight.flightNumber }} ({{ booking.flight.airline }})</h5>
-    <p>Class: {{ booking.classType }}</p>
-    <p>Passengers: {{ booking.passengers.length }}</p>
-    <p>Amount Paid: ₹{{ booking.amountPaid }}</p>
-    <p>Booking Date: {{ booking.bookingDate | date:'medium' }}</p>
-    <button class="btn btn-danger" (click)="cancelBooking(i)">Cancel Booking</button>
+  <!-- Booking Cards -->
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let booking of bookings; let i = index">
+      <div class="booking-card shadow-sm">
+        <div class="booking-header">
+          <h5 class="airline">✈️ {{ booking.flight.airline }}</h5>
+          <span class="badge bg-primary">#{{ booking.flight.flightNumber }}</span>
+        </div>
+
+        <div class="booking-body">
+          <p><strong>Class:</strong> {{ booking.classType }}</p>
+          <p><strong>Passengers:</strong> {{ booking.passengers.length }}</p>
+          <p><strong>Amount Paid:</strong> ₹{{ booking.amountPaid }}</p>
+          <p><strong>Booking Date:</strong> {{ booking.bookingDate | date:'medium' }}</p>
+        </div>
+
+        <div class="booking-actions mt-3">
+          <button class="btn btn-outline-danger w-100" (click)="cancelBooking(i)">
+            ❌ Cancel Booking
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

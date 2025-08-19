@@ -1,0 +1,48 @@
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  padding: 20px;
+}
+
+.search-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: left;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  color: #0d47a1;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-modern {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

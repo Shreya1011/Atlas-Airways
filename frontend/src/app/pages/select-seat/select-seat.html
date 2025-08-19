@@ -1,34 +1,38 @@
 <app-navbar></app-navbar>
 
 <div class="container mt-5" *ngIf="flightData">
-  <h2 class="text-center mb-4">Enter Passenger Details</h2>
+  <h2 class="text-center mb-4 fw-bold">👤 Enter Passenger Details</h2>
 
-  <div class="mb-3">
+  <!-- Flight Info -->
+  <div class="flight-summary shadow-sm p-3 mb-4 rounded">
     <p><strong>Flight:</strong> {{ flightData.flight.flightNumber }} ({{ flightData.flight.airline }})</p>
     <p><strong>Class:</strong> {{ flightData.classType }}</p>
     <p><strong>Total Passengers:</strong> {{ passengers.length }}</p>
   </div>
 
+  <!-- Passenger Form -->
   <form [formGroup]="passengerForm" (ngSubmit)="onSubmit()">
     <div formArrayName="passengers">
-      <div *ngFor="let passenger of passengers; let i = index" [formGroupName]="i" class="card mb-3 p-3">
-        <h5>Passenger {{ i + 1 }}</h5>
-        <div class="row mb-2">
-          <div class="col">
-            <label>Full Name</label>
-            <input type="text" class="form-control" formControlName="fullName">
+      <div *ngFor="let passenger of passengers; let i = index" [formGroupName]="i" class="passenger-card mb-4">
+        <h5 class="mb-3">🧾 Passenger {{ i + 1 }}</h5>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control modern-input" placeholder="Enter full name" formControlName="fullName">
           </div>
-          <div class="col">
-            <label>Age</label>
-            <input type="number" class="form-control" formControlName="age">
+          <div class="col-md-6">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control modern-input" placeholder="Enter age" formControlName="age">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="text-center">
-      <button type="submit" class="btn btn-success me-3">Continue to Payment</button>
-      <button type="reset" class="btn btn-secondary" (click)="passengerForm.reset()">Reset</button>
+    <!-- Actions -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary btn-lg me-3">💳 Continue to Payment</button>
+      <button type="reset" class="btn btn-outline-secondary btn-lg" (click)="passengerForm.reset()">🔄 Reset</button>
     </div>
   </form>
 </div>
